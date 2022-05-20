@@ -66,12 +66,13 @@ function Week() {
         setShow(data)
     }
 
-
+    
     return (
+        
         <div>
             <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 {data?.daily?.map((item, index) => {
-
+                    
                     return (
                         <Grid
                             item xs={3}
@@ -80,7 +81,7 @@ function Week() {
                             <Paper
                                 className={`${classes.block} ${item.dt === show.dt ? classes.block_active : ''}`}
                                 onClick={(e) => handleClick(item)}
-
+                                
                             >
                                 <div
                                     className={classes.date}

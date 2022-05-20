@@ -7,12 +7,17 @@ import { cvDate } from '../Convert/Date';
 import { getWeatherAsync } from '../Redux/WeatherReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import time from '../Convert/time';
+import { textAlign } from '@mui/system';
 
 const useStyles = makeStyles({
     xs4: {
-        textAlign: "center",
-        borderRadius: "0 !important",
-        height: "90vh",
+        '&[class*="MuiPaper"]': {
+           
+            borderRadius: "0",
+        },
+        textAlign:"center",
+        height: "100%",
+        
     },
 
     text_field: {
@@ -47,7 +52,8 @@ const useStyles = makeStyles({
         position: "relative",
        
         marginTop: "20px",
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: "20px",
     },
 
     wth_pict: {

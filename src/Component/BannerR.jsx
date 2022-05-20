@@ -9,10 +9,12 @@ import Week from './Week';
 import { useSelector } from 'react-redux';
 import Hour from './Hour';
 const useStyles = makeStyles({
-    xs8: {
-        backgroundColor: "rgb(246, 246, 248) !important",
-        borderRadius: "0 !important",
-        height: "90vh",
+    xs9: {
+        '&[class*="MuiPaper"]':{
+            backgroundColor: "rgb(246, 246, 248)",
+            borderRadius: "0",
+        },
+        height: "100%",
     },
     Tab: {
         paddingTop: "30px",
@@ -71,7 +73,7 @@ function BannerR() {
     };
     return (
         <Grid item xs={9}>
-            <Paper className={classes.xs8}>
+            <Paper className={classes.xs9}>
                 <Box className={classes.Tab} sx={{ width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
